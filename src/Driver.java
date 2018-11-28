@@ -66,7 +66,7 @@ public class Driver
                 nonRandJobTime = nonRandRequests[i].arrivalTime;
             }
 
-            if(nonRandRequests[i].job == 1)
+            if(nonRandRequests[i].job == 1)	//if job 1
             {
                 setBuffer(1);
                 System.out.print("Time = " + nonRandJobTime + ", " + "(" + t1.name + ")");
@@ -78,9 +78,9 @@ public class Driver
                 System.out.println("");
                 nonRandJobTime += 3; //t1 is always +3 time increments
             }
-            else if(nonRandRequests[i].job == 2)
+            else if(nonRandRequests[i].job == 2) //if job 2 'N'
             {
-                //preemption
+                //preemption handling
                 if(i + 1 < nonRandRequests.length)
                 {
                     if(nonRandRequests[i+1].job == 1 && nonRandRequests[i+1].arrivalTime < nonRandJobTime + 10)
@@ -127,7 +127,7 @@ public class Driver
                         nonRandJobTime += 10;
                 }
             }
-            else if(nonRandRequests[i].job == 3)
+            else if(nonRandRequests[i].job == 3) //if job 3 
             {
                 setBuffer(3);
                 if(i + 1 < nonRandRequests.length)
@@ -198,7 +198,7 @@ public class Driver
                 randomJobsTime = randRequests[i].arrivalTime;
             }
 
-            if(randRequests[i].job == 1)
+            if(randRequests[i].job == 1) //if job 1
             {
                 setBuffer(1);
                 System.out.print("Time: " + randomJobsTime + ", " + "(" + t1.name + ")");
@@ -210,9 +210,9 @@ public class Driver
                 System.out.println("");
                 randomJobsTime += 3;
             }
-            else if(randRequests[i].job == 2)
+            else if(randRequests[i].job == 2) //if job 2 "N"
             {
-                //preemption
+                //preemption handling
                 if(i + 1 < randRequests.length)
                 {
                     if(randRequests[i+1].job == 1 && randRequests[i+1].arrivalTime < randomJobsTime + 10)
@@ -260,10 +260,10 @@ public class Driver
                         randomJobsTime += 10;
                 }
             }
-            else if(randRequests[i].job == 3)
+            else if(randRequests[i].job == 3) //if job 3
             {
                 setBuffer(3);
-                //preemption
+                //preemption handling
                 if(i + 1 < randRequests.length)
                 {
                     if(randRequests[i+1].job == 2 && randRequests[i+1].arrivalTime < randomJobsTime + 3)
@@ -370,3 +370,9 @@ public class Driver
         }
     }
 }
+
+
+
+
+
+

@@ -5,6 +5,9 @@ public class Driver
 	/*
 	 * If the program's output shows a job's name but not the contents of the shared buffer it is because the job after it 
 	 * preempts said job and said job had no time to complete (arrival time of 2nd is < current time of preempted job). 
+	 * 
+	 * Joel Lechman
+	 * CSCI 460 Fall 2018
 	 */
 
 	
@@ -189,7 +192,7 @@ public class Driver
         
         
         //Complete random jobs
-        System.out.println("Random Jobs (running):");
+        System.out.println("Random Jobs");
         for(int i = 0; i < randRequests.length; i++)
         {
             //sometimes a job will complete before the next request
@@ -339,13 +342,14 @@ public class Driver
                 }
             }
         }     
-        System.out.println("Random Jobs after sorting:");
+        System.out.println("Random Jobs AFTER sorting:");
         printJobs(randRequests);
         System.out.println();
     }
 
     
     
+    //(2) For the following sequence of input print out your output: < 1, 3 >,< 3, 2 >,<6, 3 >,< 8, 1 >,< 10, 2 >,< 12, 3 >,< 26, 1 >.
     public static void initSetJobs()
     {
     	//below are the set non-random jobs from the assignment description.
